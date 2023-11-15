@@ -48,6 +48,42 @@ NixVM Complete
 You can Visit the site at this link or in the browser.
 </p>
 <a href="https://replit.com/@BradleyStratton/NixVM-Complete">NixVM in Browser </a>
+<h2>
+  about:blank-er
+</h2>
+    <p>Alows you to about blank cloak any site.</p>
+    <form id="form" onsubmit="return false;">
+<input   style=position:absolute;top:80%;left:5%;width:40%; type="text" id="userInput">
+<input   style=position:absolute;top:50%;left:5%;width:40%; type="submit"    onclick="name()">
+</form>
+    <button>Web VMs</button>
+    <script>
+      var urlObj = new window.URL(window.location.href);
+      var url = 'userInput';
+      if (url) {
+        var win;
+ 
+        document.querySelector('button').onclick = function() {
+          if (win) {
+            win.focus();
+          } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+          }
+          document.querySelector('button').style.bacground = 'grey';
+          document.querySelector('button').innerHTML = "Web VMs";
+        };
+      }
+ 
+    </script>
 <h3>
 Sh1mmer Revival
 </h3>
